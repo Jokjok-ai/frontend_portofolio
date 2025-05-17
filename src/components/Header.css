@@ -1,0 +1,168 @@
+/* Header.css */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease; /* Transisi lebih halus */
+  padding: 1.2rem 0; /* Sedikit lebih besar padding */
+}
+
+.header-transparent {
+  background-color: rgba(0, 0, 0, 0.5); /* Hitam transparan untuk kesan futuristik awal */
+  box-shadow: none;
+  color: #eee; /* Teks putih/abu-abu muda saat transparan */
+}
+
+.header-transparent .logo img {
+  filter: brightness(1.2); /* Sedikit lebih terang untuk kontras */
+}
+
+.header-transparent .nav-link {
+  color: #eee;
+}
+
+.header-transparent .nav-link:hover {
+  color: #ddd;
+}
+
+.header-transparent .mobile-menu-button {
+  color: #eee;
+}
+
+.header-solid {
+  background-color: #1e272e; /* Warna latar belakang solid futuristik gelap */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Efek bayangan lebih kuat */
+  color: #f5f6fa; /* Warna teks solid lebih terang */
+}
+
+.header-solid .logo img {
+  filter: none; /* Reset filter kecerahan */
+}
+
+.header-solid .nav-link {
+  color: #f5f6fa;
+}
+
+.header-solid .nav-link:hover {
+  color: #e0e7ff; /* Warna hover yang lebih cerah */
+}
+
+.header-solid .mobile-menu-button {
+  color: #f5f6fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-width: 200px; /* Ukuran logo diperkecil sedikit */
+  max-height: 70px;
+  width: auto;
+  height: auto;
+  transition: filter 0.3s ease; /* Transisi untuk efek hover atau perubahan */
+}
+
+.logo-link {
+  font-size: 1.6rem; /* Sedikit lebih besar */
+  font-weight: bold;
+  color: inherit; /* Menggunakan warna dari .header */
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Jarak antar link lebih lebar */
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative; /* Untuk garis bawah futuristik */
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #6c5ce7; /* Warna aksen futuristik */
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.mobile-menu-button {
+  background: none;
+  border: none;
+  font-size: 1.8rem; /* Ikon mobile lebih besar */
+  display: none;
+  color: inherit; /* Menggunakan warna dari .header */
+  cursor: pointer;
+  outline: none; /* Hilangkan outline default saat fokus */
+}
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #2c3e50; /* Warna latar belakang mobile nav futuristik */
+  width: 100%;
+  max-width: 300px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.3);
+  padding: 2.5rem 1.5rem; /* Padding lebih besar */
+}
+
+.mobile-nav.open {
+  transform: translateX(0);
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav li {
+  margin-bottom: 2rem; /* Spasi antar item mobile lebih besar */
+  border-bottom: 1px solid #34495e; /* Garis pemisah antar item */
+  padding-bottom: 1rem;
+}
+
+.mobile-nav li:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav a {
+  color: #ecf0f1; /* Warna teks mobile nav */
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  color: #8e44ad; /* Warna hover mobile nav */
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: block;
+  }
+}

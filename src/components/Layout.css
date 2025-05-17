@@ -1,0 +1,14 @@
+/* Layout.css */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Pastikan layout mengisi seluruh tinggi viewport */
+  background-color: #121212; /* Contoh background gelap futuristik */
+  color: #eee;
+}
+
+.main-content {
+  flex-grow: 1; /* Main content akan mengisi sisa ruang */
+  padding-top: 80px; /* Berikan ruang di bawah header yang fixed */
+  /* Tambahkan padding horizontal sesuai keinginan */
+}

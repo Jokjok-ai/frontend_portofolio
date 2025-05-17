@@ -1,0 +1,35 @@
+/* components/Footer.css */
+.footer {
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+.social-links {
+  margin-bottom: 15px;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333; /* Warna ikon default */
+  font-size: 1.5em; /* Ukuran ikon default jika menggunakan font icon */
+}
+
+.social-icon-image {
+  width: 24px; /* Atur lebar ikon sesuai kebutuhan */
+  height: 24px; /* Atur tinggi ikon sesuai kebutuhan */
+  vertical-align: middle; /* Agar ikon sejajar dengan teks (jika ada) */
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+}
+
+.copyright {
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 0;
+}
