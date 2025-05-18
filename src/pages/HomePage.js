@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './HomePage.css'; // Pastikan file CSS ini ada dan berisi style yang sesuai
 import useFetch from '../hooks/useFetch'; // Pastikan hook ini ada dan berfungsi
+import backgroundVideo from '../assets/animasi/background-home.mp4';
 
 function HomePage() {
   // State untuk data "Tentang Saya"
@@ -42,8 +43,15 @@ function HomePage() {
           <a href="#projects" className="hero-button">Lihat Proyek</a>
         </div>
         <div className="hero-visual">
-          {/* Contoh elemen visual bergerak futuristik (bisa berupa SVG animasi atau GIF) */}
-          <img src="/images/futuristic-bg.gif" alt="Futuristic Background" className="futuristic-bg" />
+          <video
+            autoPlay
+            loop
+            muted
+            className="futuristic-bg-video"
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </section>
 
@@ -97,28 +105,9 @@ function HomePage() {
         </div>
         <div className="about-me-visual">
           {/* Bisa diisi dengan foto diri bergaya digital atau ilustrasi abstrak */}
-          <div className="digital-avatar"></div>
-        </div>
-      </section>
-
-
-      <section id="skills" className="skills-section">
-        <h2 className="section-title">Keahlian</h2>
-        {/* Tambahkan daftar keahlian Anda di sini */}
-        <ul className="skills-list">
-          <li>Pengembangan Frontend (ReactJS)</li>
-          <li>Pengembangan Backend (CodeIgniter)</li>
-          <li>Desain Responsif</li>
-          <li>UI/UX</li>
-          {/* Tambahkan keahlian lainnya */}
-        </ul>
-      </section>
-
-      <section id="contact" className="contact-cta-section">
-        <div className="contact-content">
-          <h2 className="section-title">Tertarik Berkolaborasi?</h2>
-          <p>Mari wujudkan ide-ide cemerlang Anda menjadi solusi digital yang inovatif. Hubungi saya untuk diskusi lebih lanjut!</p>
-          <a href="mailto:alamatemail@anda.com" className="contact-button">Hubungi Saya</a>
+          <div className="digital-avatar">
+            <img src="/assets/tecno.webp" alt="Avatar Animasi" />
+          </div>
         </div>
       </section>
     </div>

@@ -41,9 +41,9 @@ const Header = () => {
 
         <nav className="desktop-nav">
           <ul className="nav-links">
-  <li><Link to="/" className={`nav-link ${isTransparent ? 'light-text' : 'dark-text'}`}>Beranda</Link></li>
-  <li><Link to="/projects" className={`nav-link ${isTransparent ? 'light-text' : 'dark-text'}`}>Proyek</Link></li>
-  <li><Link to="/#about" className={`nav-link ${isTransparent ? 'light-text' : 'dark-text'}`}>Tentang</Link></li>
+  <li><a href="#" className={`nav-link ${isTransparent ? 'light-text' : 'dark-text'}`}>Beranda</a></li>
+  <li><a href="#projects" className={`nav-link ${isTransparent ? 'light-text' : 'dark-text'}`}>Proyek</a></li>
+  <li><a href="#about" className={`nav-link ${isTransparent ? 'light-text' : 'dark-text'}`}>Tentang</a></li>
 </ul>
 
         </nav>
@@ -60,7 +60,7 @@ const Header = () => {
           <ul>
             <li><Link to="/" onClick={toggleMobileNav}>Beranda</Link></li>
             <li><Link to="/projects" onClick={toggleMobileNav}>Proyek</Link></li>
-            <li><Link to="/#about" onClick={toggleMobileNav}>Tentang</Link></li>
+            <li><Link to="/about" onClick={toggleMobileNav}>Tentang</Link></li>
           </ul>
         </div>
       </div>
